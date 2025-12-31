@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Antravox — Login</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login.css') }}">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}"
+           alt="Company Logo"
+           class="logo-img">
+    </div>
+
+    <div class="logo-text">
+      <h1>Antravox Solutions Private Limited</h1>
+      <p>IVR · SIP · VOIP · MESSAGING</p>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}#home">Home</a>
+    <a href="{{ url_for('home') }}#industries">Industries</a>
+    <a href="{{ url_for('home') }}#products">Products</a>
+    <a href="{{ url_for('careers') }}">Careers</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+  </nav>
+</header>
+
+<!-- ================= LOGIN FORM ================= -->
+<div class="container">
+  <h2 class="title">Login</h2>
+
+  <form action="{{ url_for('login') }}" method="POST">
+    <input type="text"
+           name="name"
+           placeholder="Name"
+           class="input-field"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Email"
+           class="input-field"
+           required>
+
+    <button type="submit" class="primary-btn">
+      Submit
+    </button>
+  </form>
+</div>
+
+</body>
+</html>

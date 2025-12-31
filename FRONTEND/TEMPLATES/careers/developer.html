@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Software Developer | Antravox Careers</title>
+
+  <!-- SEO -->
+  <meta name="description"
+        content="Software Developer job opening at Antravox Solutions. Build IVR, SIP, VoIP, and communication platforms." />
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+
+  <!-- CAREERS PAGE CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/careers/dmi.css') }}">
+</head>
+
+<body>
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">
+    <div class="logo-icon">
+      <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}"
+           alt="Company Logo"
+           class="logo-img">
+    </div>
+
+    <div class="logo-text">
+      <h1>Antravox Solutions Private Limited</h1>
+      <p>IVR · SIP · VOIP · MESSAGING</p>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}#home">Home</a>
+    <a href="{{ url_for('home') }}#industries">Industries</a>
+    <a href="{{ url_for('home') }}#products">Products</a>
+    <a href="{{ url_for('careers') }}">Careers</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+  </nav>
+</header>
+
+<!-- ================= JOB DETAILS ================= -->
+<section id="developer-roles"
+         class="job-details"
+         aria-label="Software Developer Job Description">
+
+  <h1>Software Developer</h1>
+
+  <!-- SUMMARY -->
+  <div class="job-summary-card">
+    <div class="summary-item">
+      <span class="summary-label">Experience</span>
+      <span class="summary-value">Freshers – 3+ Years</span>
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-label">Location</span>
+      <span class="summary-value">India (Hybrid / Onsite)</span>
+    </div>
+
+    <div class="summary-item">
+      <span class="summary-label">Job Type</span>
+      <span class="summary-value">Full-Time</span>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <p class="job-intro">
+    We are looking for passionate and skilled Software Developers to join our
+    engineering team and help build scalable, secure, and high-performance
+    communication platforms including IVR, SIP, VoIP, and messaging solutions.
+  </p>
+
+  <!-- RESPONSIBILITIES -->
+  <h3>Key Responsibilities</h3>
+  <ul>
+    <li>Design, develop, test, and maintain web and backend applications</li>
+    <li>Develop RESTful APIs and integrate third-party services</li>
+    <li>Collaborate with product managers, QA, and DevOps teams</li>
+    <li>Write clean, efficient, and reusable code</li>
+    <li>Debug and optimize application performance</li>
+  </ul>
+
+  <!-- SKILLS -->
+  <h3>Required Skills & Qualifications</h3>
+  <ul>
+    <li>Java / Python / Node.js / React</li>
+    <li>OOP, data structures, REST APIs</li>
+    <li>MySQL / MongoDB</li>
+    <li>Git version control</li>
+    <li>Basic cloud knowledge (AWS / GCP / Azure)</li>
+  </ul>
+
+  <!-- ACTION BUTTONS -->
+  <div class="action-buttons">
+    <a href="/apply?role=Software Developer" class="apply-btn">
+      I'm Interested
+    </a>
+
+    <a href="/careers" class="back-btn">
+      ← Back to Careers
+    </a>
+  </div>
+
+</section>
+
+</body>
+</html>

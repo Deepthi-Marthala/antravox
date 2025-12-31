@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}" class="login-btn">Login</a>/nav>
+  </header>
+  <title>VoIP — Voice over IP Solutions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">VoIP — Enterprise Voice Solutions</h1>
+          <p class="lead">Reliable, scalable Voice over IP for contact centers and businesses — cloud PBX, SIP trunking, call recording, and global reach.</p>
+          <ul class="meta-list" aria-hidden="true">
+            <li>SIP Trunks • Cloud PBX</li>
+            <li>Global numbers • SLA-ready</li>
+          </ul>
+        </div>
+ <div class="hero-actions">
+            <button id="ReadMoreBtn" class="btn primary">Read More</button>
+            <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g-voip" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="108" height="108" rx="16" fill="url(#g-voip)" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS collapsed by default -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- Summary boxes -->
+        <div class="grid boxes-grid">
+          <article class="box" tabindex="0" aria-labelledby="b1"><h3 id="b1">What is VoIP?</h3><p>VoIP transmits voice over IP networks, replacing traditional PSTN with internet-based calling — for users, offices and contact centers.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b2"><h3 id="b2">Core Features</h3><p>SIP trunking, Cloud PBX, call recording, IVR, call routing, number portability and analytics.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b3"><h3 id="b3">Business Benefits</h3><p>Lower call costs, centralized control, flexible scaling, better reporting and unified comms across locations.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b4"><h3 id="b4">Who Uses VoIP?</h3><p>Contact centers, distributed teams, SMBs, enterprises with multi-site voice needs and remote-first companies.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b5"><h3 id="b5">Use Cases</h3><p>Contact centers, remote agents, branch office connectivity, cloud PBX, SIP interconnect for carriers.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b6"><h3 id="b6">Tech Stack</h3><p>SIP, RTP/SRTP, SIP proxies, SBCs, WebRTC gateway, media servers, session border controllers and monitoring agents.</p></article>
+        </div>
+
+        <!-- Deep content in boxes -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">How VoIP Works — Simplified Flow</h3>
+            <ol>
+              <li><strong>Registration:</strong> Phone or softphone registers with SIP server (SIP invite/401 challenge/OK).</li>
+              <li><strong>Call Setup:</strong> SIP INVITE negotiates codecs; RTP streams voice media between endpoints (SRTP if encrypted).</li>
+              <li><strong>Call Routing:</strong> SIP proxy/SBC routes calls to PSTN via SIP Trunks or to other SIP endpoints.</li>
+              <li><strong>Media Handling:</strong> Media servers handle conferencing, recordings and transcoding when required.</li>
+              <li><strong>Session Tear-down:</strong> BYE/200 OK ends the session and logs are stored for analytics.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">Deployment & Integration</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>Cloud PBX</strong><p>Hosted phone system with user provisioning and admin controls.</p></div>
+              <div class="mini-box"><strong>SIP Trunking</strong><p>Carrier-grade trunks to connect to PSTN and other operators.</p></div>
+              <div class="mini-box"><strong>On-prem SBC</strong><p>Optional SBC for security, QoS & interop with legacy systems.</p></div>
+              <div class="mini-box"><strong>CRM & APIs</strong><p>Screen-pop, call logs & webhooks for ticketing and CRM workflows.</p></div>
+              <div class="mini-box"><strong>WebRTC</strong><p>Browser-based calling & click-to-call for webapps.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Security & Resilience</h3>
+            <p>SIP over TLS, SRTP for media encryption, DDoS & fraud detection, geo-redundant routing, SBC-based policy enforcement and secure access controls. Optionally enable emergency call handling and E911 support where applicable.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">Quality & Monitoring</h3>
+            <p>RTP QoS, QoE monitoring (MOS scores), jitter/buffer controls, active synthetic calls, CDR analytics and real-time dashboards for ops teams to maintain SLAs.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">FAQs</h3>
+            <div class="faq-grid">
+              <div class="faq-box">
+                <button class="faq-toggle">Do you provide local numbers?</button>
+                <div class="faq-body" hidden>Yes — we provision DID numbers in major countries and support number porting in supported regions.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">How is call quality ensured?</button>
+                <div class="faq-body" hidden>We use carrier-grade trunks, QoS settings, jitter buffers, regional PoPs and real-time monitoring to ensure high MOS scores.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">Can I keep my existing PBX?</button>
+                <div class="faq-body" hidden>Yes — hybrid deployments via SIP trunking and SBCs allow co-existence with legacy PBX systems during migration.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING boxes -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">VoIP Plans</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Starter</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 50 trunks</li><li>Cloud PBX basic</li><li>Email support</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#pricing">Start</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Business</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Carrier-grade SIP trunks</li><li>Call recording & analytics</li><li>24×7 support</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#pricing">Choose Business</a></div>
+          </div>
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Enterprise</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Dedicated SBC & PoP</li><li>Custom SLAs</li><li>On-prem integration</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#pricing">Contact Sales</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => setOpen(!details.classList.contains('open')));
+
+      // FAQ toggles
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+
+      // ensure pricing boxes visible on load
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#pricing .box').forEach(b => b.classList.add('visible'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+    })();
+  </script>
+</body>
+</html>

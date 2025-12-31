@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/contact.css') }}">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='images/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}#home" class="nav-item">Home</a>
+    <a href="{{ url_for('home') }}#industries" class="nav-item">Industries</a>
+    <a href="{{ url_for('home') }}#products" class="nav-item">Products</a>
+    <a href="{{ url_for('careers') }}" class="nav-item">Careers</a>
+    <a href="{{ url_for('contact') }}" class="nav-item">Contact</a>
+    <a href="{{ url_for('login') }}" class="login-btn nav-item">Login</a>
+  </nav>
+  </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Antravox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/contact.css') }}">
+</head>
+
+<body>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="contact-hero">
+  <div class="hero-left">
+    <h1>Contact Antravox</h1>
+    <p>Get answers to your questions about anything Antravox
+    Whether you’re exploring our communication solutions, need technical assistance, or want to understand how Antravox can support your business growth, our team is here to help. We’re committed to providing clear, timely, and reliable responses to ensure you have the information you need to make confident decisions.</p>
+  </div>
+
+  <div class="hero-right">
+   <img src="{{ url_for('static', filename='IMAGES/contact-bg.jpg') }}" alt="Contact Antravox">
+
+  </div>
+</section>
+
+<!-- ================= CONTACT INFO SECTION ================= -->
+<section class="contact-info">
+
+  <div class="info-box">
+    <h3><b>Talk to us</b></h3>
+    <p class="bold">+91 80000 12345</p>
+    <p>India Toll-free</p>
+    <p class="bold">+91 40 1234 5678</p>
+    <p>Outside India</p>
+  </div>
+
+  <div class="info-box">
+    <h3><b>Write to us</b></h3>
+    <p class="bold">sales@antravox.com</p>
+    <p>To know more about our services</p>
+    <p class="bold">support@antravox.com</p>
+    <p class="contact-subtext">For general queries</p>
+
+    <!-- BUTTON THAT SCROLLS -->
+    <a href="#contact-form" class="outline-btn">
+      Contact us →
+    </a>
+  </div>
+
+  <div class="info-box">
+    <h3><b>Visit us</b></h3>
+    <p class="bold">Corporate Headquarters</p>
+    <p>
+      Antravox Solutions Pvt Ltd<br>
+      Bangalore, Karnataka<br>
+      India
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACT FORM (BOTTOM OF PAGE) ================= -->
+<section id="contact-form" class="send-message">
+  <div class="message-box">
+    <h2>Send us a message</h2>
+
+    <form>
+      <label>Full Name / Company Name *</label>
+      <input type="text" placeholder="John Doe" required>
+
+      <label>Email Address *</label>
+      <input type="email" placeholder="john@company.com" required>
+
+      <label>Service Interested In</label>
+      <select>
+        <option>Select a service</option>
+        <option>IVR</option>
+        <option>Messaging</option>
+        <option>VoIP</option>
+        <option>SIP</option>
+        <option>AI Agent</option>
+        <option>AI Agent</option>
+        <option>Others</option>
+
+      </select>
+
+      <label>Message</label>
+      <textarea rows="4" placeholder="Write your message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- =======================
+     JAVASCRIPT NAVBAR HIGHLIGHT
+======================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll("section, main");
+
+  /* =========================
+     CLICK → ACTIVE BUTTON
+  ========================= */
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
+  /* =========================
+     SCROLL → ACTIVE BUTTON
+  ========================= */
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href")?.includes(`#${current}`)) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+});
+</script>

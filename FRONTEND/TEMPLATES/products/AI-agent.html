@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+</nav>
+  </header>
+  <title>AI Agent — Conversational AI Agent</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">AI Agent — Conversational Virtual Agent</h1>
+          <p class="lead">Autonomous conversational agents that handle voice & chat, fetch data, complete transactions and hand off to humans when needed.</p>
+          <ul class="meta-list" aria-hidden="true">
+            <li>Dialog Mgmt • Actions</li>
+            <li>Omnichannel • Analytics</li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+            <button id="ReadMoreBtn" class="btn primary">Read More</button>
+            <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g-agent" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="108" height="108" rx="16" fill="url(#g-agent)" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS (collapsed by default) -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- SUMMARY BOXES -->
+        <div class="grid boxes-grid">
+          <article class="box" tabindex="0" aria-labelledby="b1">
+            <div class="icon" aria-hidden="true">
+              <!-- agent brain icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2v4M4 8v2M20 8v2M7 20a5 5 0 0 1 10 0"/>
+              </svg>
+            </div>
+            <h3 id="b1">What is an AI Agent?</h3>
+            <p>An AI Agent is a conversational system that performs tasks, executes actions (APIs), and manages multi-step flows with autonomy and context-awareness.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b2">
+            <div class="icon" aria-hidden="true">
+              <!-- features -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M3 7h18M3 12h12M3 17h6"/>
+              </svg>
+            </div>
+            <h3 id="b2">Core Capabilities</h3>
+            <p>Intent & entity extraction, action execution (API calls), context memory, multi-turn dialog and human handoff with context transfer.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b3">
+            <div class="icon" aria-hidden="true">
+              <!-- benefits -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2v7M5 12l7 7 7-7"/>
+              </svg>
+            </div>
+            <h3 id="b3">Business Benefits</h3>
+            <p>Automate complex tasks, improve containment, shorten resolution time, enable 24×7 support and reduce operational costs.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b4">
+            <div class="icon" aria-hidden="true">
+              <!-- who -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M3 6h18M3 12h7M3 18h4"/>
+              </svg>
+            </div>
+            <h3 id="b4">Who Uses AI Agents</h3>
+            <p>Banks (transactions), telcos (provisioning), e-commerce (returns/refunds), utilities (outage handling) and SaaS support desks.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b5">
+            <div class="icon" aria-hidden="true">
+              <!-- use cases -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M4 7h16M4 12h10M4 17h7"/>
+              </svg>
+            </div>
+            <h3 id="b5">Common Use Cases</h3>
+            <p>Account management, password resets, order modifications, refunds, proactive notifications, and scheduling.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b6">
+            <div class="icon" aria-hidden="true">
+              <!-- tech -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2v6M6 12h12M6 18h12"/>
+              </svg>
+            </div>
+            <h3 id="b6">Tech Stack</h3>
+            <p>Large language models, dialog manager, action runners, secure webhooks, stateful memory stores and observability pipelines.</p>
+          </article>
+        </div>
+
+        <!-- DEEP CONTENT BOXES -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">How an AI Agent Works — Flow</h3>
+            <ol>
+              <li><strong>Trigger:</strong> User starts via voice, chat or API event.</li>
+              <li><strong>Understand:</strong> ASR (voice) → text → LLM/NLU extracts intent, entities and confidence.</li>
+              <li><strong>Plan:</strong> Dialog manager chooses next action: ask, call API, or execute multi-step workflow.</li>
+              <li><strong>Execute:</strong> Agent runs actions (payment API, DB read/write, ticket creation) securely via action runners.</li>
+              <li><strong>Respond:</strong> Agent replies via TTS or chat, offering confirmations and transaction IDs.</li>
+              <li><strong>Persist:</strong> Store context & results for later recall and analytics.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">Action Integrations</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>Secure APIs</strong><p>Call external services with tokenized auth & input validation.</p></div>
+              <div class="mini-box"><strong>DB & CRM</strong><p>Read/write customer records and push screen-pop to agents.</p></div>
+              <div class="mini-box"><strong>Payments</strong><p>Tokenized payment flows and PCI-friendly handoffs.</p></div>
+              <div class="mini-box"><strong>Scheduler</strong><p>Schedule callbacks, reminders and follow-ups.</p></div>
+              <div class="mini-box"><strong>Observability</strong><p>Trace actions, latency, error rates and user journeys.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Safety & Governance</h3>
+            <p>Role-based access, audit logs, redaction for PII, policy controls on actions, rate limits, and human approval flows for sensitive operations.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">Monitoring & Continuous Improvement</h3>
+            <p>Metrics: task success, completion rate, escalation rate, user satisfaction. Capture transcripts & feedback for retraining and rule updates.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">FAQs</h3>
+            <div class="faq-grid">
+              <div class="faq-box">
+                <button class="faq-toggle">Can the agent complete payments?</button>
+                <div class="faq-body" hidden>Yes — using tokenized payment integrations or secure handoffs to PCI-compliant pages; configurable per customer policy.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">How do agents learn?</button>
+                <div class="faq-body" hidden>Agents learn via labeled transcripts, human-in-the-loop corrections, supervised fine-tuning and continuous data pipelines.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">What happens on failure?</button>
+                <div class="faq-body" hidden>On low confidence or action failure, agent asks clarifying questions or escalates to a human with full context and logs.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING (visible boxes) -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">AI Agent Pricing</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Starter</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 10k interactions</li><li>Standard LLM + actions</li><li>Email support</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#pricing">Start</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Pro</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 100k interactions</li><li>Advanced NLU & action runners</li><li>Priority support</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#pricing">Choose Pro</a></div>
+          </div>
+
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Enterprise</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Unlimited interactions</li><li>On-prem / dedicated infra</li><li>Dedicated MLOps</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#pricing">Contact Sales</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => setOpen(!details.classList.contains('open')));
+
+      // ensure pricing boxes visible on load
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#pricing .box').forEach(b => b.classList.add('visible'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+      // FAQ toggles
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

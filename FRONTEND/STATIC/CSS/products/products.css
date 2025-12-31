@@ -1,0 +1,177 @@
+/* ================================
+   PRODUCTS SECTION
+================================ */
+
+#products {
+  scroll-margin-top: 80px;
+}
+
+/* SECTION TITLE */
+.products-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #002f50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+/* WRAPPER FOR ARROWS + GRID */
+.products-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* GRID (4 CARDS VISIBLE DESKTOP) */
+.products-grid {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 1000px; /* Desktop width → 4 cards fit */
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+/* FLIP CARD BASE */
+.flip-card {
+  width: 230px;
+  height: 300px;
+  perspective: 1000px;
+  flex-shrink: 0;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  overflow: hidden;
+  font-style: italic;
+  pointer-events: none !important;
+}
+
+/* FRONT COLORS */
+.card1 { background: #A0E7E5; }
+.card2 { background: #B4F8C8; }
+.card3 { background: #FBE7C6; }
+.card4 { background: #FFAEBC; }
+.card5 { background: #D9D7F1; }
+.card6 { background: #FFC75F; }
+
+
+
+/* FRONT IMAGES */
+.flip-card-front img {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 10px;
+}
+
+/* BACK SIDE */
+.flip-card-back {
+  transform: rotateY(180deg); 
+  color: #082c4e;
+  font-size: 0.95rem;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);  /* soft elegant shadow */
+  pointer-events: auto !important;
+}
+
+/* ARROW BUTTONS */
+.arrow {
+  background: #003d6b;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  background: #005080;
+}
+
+
+.flip-card-back a,
+.flip-card-back button {
+  position: relative !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+ 
+/* ============================= */
+/*        RESPONSIVE MEDIA       */
+/* ============================= */
+
+/* 📌 TABLETS — Show 2 Cards */
+@media (max-width: 1024px) {
+  .products-grid {
+    width: 520px; /* 2 cards visible */
+  }
+  .flip-card {
+    width: 240px;
+  }
+}
+
+/* 📌 LARGE MOBILES — Show 1 Card */
+@media (max-width: 768px) {
+  .products-wrapper {
+    gap: 5px;
+  }
+  .products-grid {
+    width: 260px; /* Only 1 card visible */
+  }
+  .flip-card {
+    width: 240px;
+    height: 280px;
+  }
+  .arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
+
+/* 📌 SMALL MOBILES — FULL WIDTH CARD */
+@media (max-width: 480px) {
+  .products-grid {
+    width: 100%; /* Full width */
+  }
+  .flip-card {
+    width: 90%;
+    height: 260px;
+    margin: auto;
+  }
+  /* Hide arrows on very small screens */
+  .arrow {
+    display: none;
+  }
+}

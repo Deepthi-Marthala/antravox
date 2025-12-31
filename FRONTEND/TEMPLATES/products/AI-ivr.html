@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+</nav>
+  </header>
+  <title>AI IVR — Conversational AI IVR</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">AI-Powered IVR</h1>
+          <p class="lead">Conversational, context-aware IVR using NLU and adaptive routing — reduce handle time while improving CX with AI that learns.</p>
+          <ul class="meta-list" aria-hidden="true">
+            <li>NLU • Dialog Management</li>
+            <li>CRM integration • Real-time analytics</li>
+          </ul>
+        </div>
+          <div class="hero-actions">
+            <button id="ReadMoreBtn" class="btn primary">Read More</button>
+            <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g-ai" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="108" height="108" rx="16" fill="url(#g-ai)" opacity="0.95"/>
+              <g transform="translate(22,28)" fill="none" stroke="#fff" stroke-width="1.4">
+                <circle cx="10" cy="10" r="2.6" fill="#fff"/>
+                <path d="M0 30 C18 6 42 6 60 30" opacity="0.9"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS (collapsed by default) -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- SUMMARY BOXES -->
+        <div class="grid boxes-grid">
+          <article class="box" tabindex="0" aria-labelledby="b1">
+            <div class="icon" aria-hidden="true">
+              <!-- NLU icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4"/><path d="M20 12a8 8 0 1 0-8 8"/></svg>
+            </div>
+            <h3 id="b1">What is AI IVR?</h3>
+            <p>Conversational IVR that uses NLU, dialog management and context to understand natural speech and automate resolution without rigid menus.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b2">
+            <div class="icon" aria-hidden="true">
+              <!-- features icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 7h18M3 12h12M3 17h6"/></svg>
+            </div>
+            <h3 id="b2">Core Capabilities</h3>
+            <p>Intent detection, slot-filling, ASR + TTS, sentiment detection, context carryover, and live agent handoff with context.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b3">
+            <div class="icon" aria-hidden="true">
+              <!-- benefit icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v7M5 12l7 7 7-7"/></svg>
+            </div>
+            <h3 id="b3">Business Benefits</h3>
+            <p>Shorter AHT, higher containment, faster routing to skilled agents, personalized responses and 24×7 conversational support.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b4">
+            <div class="icon" aria-hidden="true">
+              <!-- who icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 6h18M3 12h7M3 18h4"/></svg>
+            </div>
+            <h3 id="b4">Who Should Use</h3>
+            <p>Banks, insurers, telcos, utilities, e-commerce and enterprises that need automated, natural-language customer interactions.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b5">
+            <div class="icon" aria-hidden="true">
+              <!-- use case -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 7h16M4 12h10M4 17h7"/></svg>
+            </div>
+            <h3 id="b5">Common Use Cases</h3>
+            <p>Balance enquiry, order status, appointment booking, fraud detection alerts, and conversational surveys.</p>
+          </article>
+
+          <article class="box" tabindex="0" aria-labelledby="b6">
+            <div class="icon" aria-hidden="true">
+              <!-- tech -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v6M6 12h12M6 18h12"/></svg>
+            </div>
+            <h3 id="b6">Tech Stack</h3>
+            <p>ASR, NLU models, dialog manager, TTS, vector store for context, webhooks, and integrations with CRMs and knowledge bases.</p>
+          </article>
+        </div>
+
+        <!-- DEEP CONTENT BOXES -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">How AI IVR Works — Flow</h3>
+            <ol>
+              <li><strong>Call / Voice Event:</strong> System receives call or voice message.</li>
+              <li><strong>ASR:</strong> Speech-to-text converts audio to text in real time.</li>
+              <li><strong>NLU & Intent:</strong> NLU predicts intent, extracts entities (slot-filling) and confidence scores.</li>
+              <li><strong>Dialog Manager:</strong> Decides next action: answer, ask follow-up, escalate to agent, or call API.</li>
+              <li><strong>Action:</strong> Fetch data via API/webhook, read result via TTS, or route with context to agent.</li>
+              <li><strong>Learning Loop:</strong> Interactions are stored for model retraining and continuous improvement.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">Integration & Deployment</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>Design</strong><p>Define intents, utterances, fallbacks and handoff rules with stakeholders.</p></div>
+              <div class="mini-box"><strong>Connect</strong><p>Integrate CRM, knowledge base, ticketing and analytics via secure webhooks.</p></div>
+              <div class="mini-box"><strong>Train</strong><p>Seed NLU with examples; use transfer learning & prebuilt models for fast accuracy gains.</p></div>
+              <div class="mini-box"><strong>Test</strong><p>Simulate calls, measure intent accuracy, edge-cases and confidence thresholds.</p></div>
+              <div class="mini-box"><strong>Launch</strong><p>Phased rollouts, monitoring and iterative improvements.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Security & Compliance</h3>
+            <p>TLS & SRTP for transport, encryption-at-rest for PII, role-based console access, PII masking, PCI tokenization for payments, and audit logs. Support for regional compliance (GDPR, PCI, local laws).</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">Monitoring & Model Ops</h3>
+            <p>Real-time dashboards: intent accuracy, containment rate, fallback rates, confidence histograms, audio sampling for QA, and a retraining pipeline with human-in-the-loop correction.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">FAQs</h3>
+            <div class="faq-grid">
+              <div class="faq-box">
+                <button class="faq-toggle">What languages are supported?</button>
+                <div class="faq-body" hidden>We support major languages and dialects via cloud ASR providers plus custom models for regional languages on request.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">How do you handle low-confidence matches?</button>
+                <div class="faq-body" hidden>We use graceful degradation: ask clarifying questions, offer menu fallback, or route to agent depending on confidence thresholds.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">Can it detect fraud attempts?</button>
+                <div class="faq-body" hidden>Yes — integrate voice biomarkers, anomaly detection and real-time risk scoring to flag suspicious calls for agent review.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING (visible boxes) -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">AI IVR Pricing</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Starter</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 5,000 interactions</li><li>Basic NLU model</li><li>Email support</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#pricing">Start</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Standard</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 50,000 interactions</li><li>Custom NLU + analytics</li><li>Priority support</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#pricing">Choose Standard</a></div>
+          </div>
+
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Enterprise</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Unlimited interactions</li><li>On-prem/SLA options</li><li>Dedicated MLOps</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#pricing">Contact Sales</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => setOpen(!details.classList.contains('open')));
+
+      // ensure pricing boxes visible on load
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#pricing .box').forEach(b => b.classList.add('visible'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+      // FAQ toggles
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

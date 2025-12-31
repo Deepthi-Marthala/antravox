@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply – {{ role }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}#home" class="nav-item">Home</a>
+    <a href="{{ url_for('home') }}#industries" class="nav-item">Industries</a>
+    <a href="{{ url_for('home') }}#products" class="nav-item">Products</a>
+    <a href="{{ url_for('careers') }}" class="nav-item">Careers</a>
+    <a href="{{ url_for('contact') }}" class="nav-item">Contact</a>
+    <a href="{{ url_for('login') }}" class="login-btn nav-item">Login</a>
+  </nav>
+  </header>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/apply.css') }}">
+</head>
+
+<body>
+
+<!-- ================= TOP LOGO ================= -->
+<!-- <div class="job-topbar">
+    <img src="{{ url_for('static', filename='Antravox1.jpg') }}"
+         class="job-logo"
+         alt="Antravox Logo">
+</div> -->
+
+<!-- ================= HEADER CONTENT ================= -->
+<div class="job-header">
+    <p class="job-meta">
+        Antravox Solutions <span>|</span> Full time
+    </p>
+    <h1 class="job-title">
+        {{ role }}
+    </h1>
+    <!-- Share -->
+    <div class="job-share">
+    <div class="share-text">
+        Share this job with your network
+    </div>
+
+    <div class="share-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+       <a href="#"><i class="fas fa-envelope"></i></a>
+       <a href="#"><i class="fab fa-telegram"></i></a>
+       <a href="#"><i class="fas fa-link"></i></a>
+    </div> 
+</div>
+
+</div>
+
+<!-- ================= BREADCRUMB ================= -->
+<div class="breadcrumb">
+    <a href="{{ url_for('careers') }}">Job listing</a>
+    <span>›</span>
+    <a href="{{ url_for('developer') }}">Job details</a>
+    <span>›</span>
+    <span class="active">Job application</span>
+</div>
+
+<!-- ================= AUTOFILL SECTION ================= -->
+<div class="apply-section">
+    <!-- <div class="apply-container">
+        <h3 class="autofill-title">Autofill Application</h3>
+<p class="autofill-desc">
+    Upload your resume/cv in seconds with the autofill option.
+</p>
+<div class="resume-box" id="resumeBox">
+    <label for="resume-autofill">
+        <strong>Upload your resume</strong> or drag and drop here<br>
+        <span>Only .doc, .docx, .pdf, .odt, .rtf</span><br>
+    </label> 
+    <input
+        type="file"
+        id="resume-autofill"
+         name="resume"
+        accept=".doc,.docx,.pdf,.odt,.rtf"> -->
+</div>
+        <!-- ================= APPLICATION FORM ================= -->
+        <form action="{{ url_for('submit') }}"
+              method="POST"
+              class="apply-form"
+              enctype="multipart/form-data">
+
+            <label>Full Name *</label>
+            <input type="text" name="Student_Name" required>
+
+            <label>Email *</label>
+            <input type="email" name="Student_Email" required>
+
+            <label>Role *</label>
+            <select name="Student_Role" required>
+                <option value="">-- Select Role --</option>
+                <option value="Developer" {{ 'selected' if role == 'Developer' else '' }}>Developer</option>
+                <option value="Marketing" {{ 'selected' if role == 'Marketing' else '' }}>Marketing</option>
+                <option value="Internship" {{ 'selected' if role == 'Internship' else '' }}>Internship</option>
+            </select>
+
+            <label>Qualification *</label>
+            <select name="Student_Qualification" required>
+                <option value="">-- Select Qualification --</option>
+                <option>B.Tech / B.E</option>
+                <option>MCA</option>
+                <option>M.Tech</option>
+            </select>
+
+            <label>Gender *</label>
+            <select name="Student_Gender" required>
+                <option value="">-- Select Gender --</option>
+                <option>FEMALE</option>
+                <option>MALE</option>
+                <option>PREFER NOT TO SAY</option>
+            </select>
+
+            <label>College / University *</label>
+            <input type="text" name="Student_College_University" required>
+
+            <label>Branch *</label>
+            <select name="Student_Branch" required>
+                <option value="">-- Select Branch --</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>AI/ML</option>
+                <option>Cyber Security</option>
+                <option>Data Science</option>
+                <option>EEE</option>
+                <option>Others</option>
+            </select>
+
+            <label>Upload Resume *</label>
+            <input type="file"
+                   name="Student_Resume"
+                   accept=".pdf,.doc,.docx"
+                   required>
+
+            <button type="submit" class="submit-btn">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+   <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+</nav>
+  </header>
+  <title>SIP — Systematic Investment Plan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">Systematic Investment Plan (SIP)</h1>
+          <p class="lead">Invest small amounts regularly to build wealth over time. SIPs are a disciplined, flexible and convenient way to invest in mutual funds.</p>
+          <ul class="meta-list" aria-hidden="true"></ul>
+            <li> Rule-based investments</li>
+            <li>Auto-debit</li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+            <button id="ReadMoreBtn" class="btn primary">Read More</button>
+            <a href="#plans" class="btn ghost">See Plans</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <!-- simple gradient circle -->
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g2" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <circle cx="60" cy="60" r="50" fill="url(#g2)" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS (collapse) -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- Summary boxes -->
+        <div class="grid boxes-grid">
+          <article class="box" tabindex="0" aria-labelledby="b1"><h3 id="b1">What is SIP?</h3><p>A method to invest fixed sums in mutual funds at regular intervals — monthly/quarterly — helping rupee-cost averaging and disciplined investing.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b2"><h3 id="b2">Key Benefits</h3><p>Disciplined savings, rupee-cost averaging, power of compounding, low entry amount, and flexible stop/start options.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b3"><h3 id="b3">Who is it for?</h3><p>Beginners, salaried professionals, systematic savers, and long-term investors targeting goals like retirement, education or wealth creation.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b4"><h3 id="b4">How it Works</h3><p>Set amount & frequency → Auto-debit from bank → Units purchased at NAV → Repeats each period → Track in portfolio.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b5"><h3 id="b5">Types of SIPs</h3><p>Regular SIP, Top-up SIP, Flexi SIP (varied amounts), and Trigger-based SIPs (value/threshold or market events).</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b6"><h3 id="b6">Tax & Exit</h3><p>Equity funds: long-term capital gains rules apply; debt funds follow different tax rules. Exit loads vary by fund — check scheme documents.</p></article>
+        </div>
+
+        <!-- Deep content in boxed layout -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">SIP — Step by Step</h3>
+            <ol>
+              <li><strong>Choose Goal:</strong> Short, medium or long term (e.g., 3 years, 10 years).</li>
+              <li><strong>Pick Fund:</strong> Select mutual fund & scheme based on risk profile.</li>
+              <li><strong>Decide Amount & Frequency:</strong> Eg ₹500 monthly via ECS/Auto-debit/UPI mandate.</li>
+              <li><strong>Start SIP:</strong> SIP starts from the chosen date; units purchased at NAV.</li>
+              <li><strong>Monitor & Top-up:</strong> Review periodically; use top-up SIP to increase investments.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">SIP Strategies</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>Rupee-Cost Averaging</strong><p>Buy more units when NAV is low, fewer when high — evens out purchase cost over time.</p></div>
+              <div class="mini-box"><strong>Top-Up SIP</strong><p>Automatically increase the SIP amount at pre-defined intervals to keep pace with income growth.</p></div>
+              <div class="mini-box"><strong>Goal-based SIP</strong><p>Allocate SIPs to specific goals with target dates and required corpus computation.</p></div>
+              <div class="mini-box"><strong>Flexi SIP</strong><p>Vary monthly SIP amounts depending on available funds or triggers.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Risk & Returns</h3>
+            <p>Equity SIPs are volatile short-term but historically outperform in long term. Debt SIPs are steadier with lower returns. Diversify across asset classes for balanced risk-return profile.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">Costs & Charges</h3>
+            <p>Look for fund expense ratio, exit loads, and taxes. Platform charges (if any) are separate — compare total cost before selecting a plan.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">Frequently Asked Questions</h3>
+            <div class="faq-grid">
+              <div class="faq-box">
+                <button class="faq-toggle">Minimum SIP amount?</button>
+                <div class="faq-body" hidden>Many funds allow SIPs from ₹100–₹500; some schemes require higher. Our platform supports SIPs starting at ₹500 by default.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">Can I pause or stop?</button>
+                <div class="faq-body" hidden>Yes — you can pause, stop or modify your SIP from your account dashboard. Stopping doesn't negate past investments.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">Is SIP safe?</button>
+                <div class="faq-body" hidden>SIP reduces timing risk via rupee-cost averaging, but market risks remain. Choose funds aligned with your risk tolerance.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PLANS (visible boxes) -->
+    <section id="plans" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">SIP Plans</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Starter</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Ideal for beginners</li><li>Diversified equity funds</li><li>Monthly statements</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#plans">Start SIP</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Growth</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Balanced equity & debt</li><li>Top-up & Flexi SIP</li><li>Quarterly review</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#plans">Choose Growth</a></div>
+          </div>
+
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Wealth</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Custom asset allocation</li><li>Dedicated advisor</li><li>Tax-efficient planning</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#plans">Contact Advisor</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => {
+        setOpen(!details.classList.contains('open'));
+      });
+
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

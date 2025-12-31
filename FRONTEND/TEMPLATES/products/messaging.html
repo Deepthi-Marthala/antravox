@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+</nav>
+  </header>
+  <title>Messaging — Business Messaging Solutions</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">Business Messaging Platform</h1>
+          <p class="lead">Reliable, scalable messaging for notifications, OTPs, conversational chatbots and customer engagement across SMS, WhatsApp, RCS and in-app channels.</p>
+          <ul class="meta-list" aria-hidden="true">
+            <li>SMS • WhatsApp • In-App</li>
+            <li>Webhooks • Templates • Analytics</li>
+          </ul>
+        </div>
+         <div class="hero-actions">
+              <button id="ReadMoreBtn" class="btn primary">Read More</button>
+              <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g-msg" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="108" height="108" rx="14" fill="url(#g-msg)" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS (collapsed by default) -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- SUMMARY BOXES -->
+        <div class="grid boxes-grid">
+          <article class="box" tabindex="0" aria-labelledby="b1"><h3 id="b1">What is Messaging?</h3><p>A platform to send and receive messages across channels (SMS, WhatsApp, RCS, in-app) for notifications, OTPs and conversations.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b2"><h3 id="b2">Core Features</h3><p>Multi-channel APIs, templated messages, delivery tracking, fallback routing, inbox for two-way chat and analytics.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b3"><h3 id="b3">Business Benefits</h3><p>Higher reach, reliable delivery, better engagement, automated flows and measurable campaign performance.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b4"><h3 id="b4">Who Uses It?</h3><p>Banks (OTP & alerts), e-commerce (order updates), healthcare (appointments), marketing teams (campaigns) and support (conversational chat).</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b5"><h3 id="b5">Use Cases</h3><p>Transactional alerts, OTPs, cart abandonment campaigns, support ticketing via chat, appointment reminders and surveys.</p></article>
+
+          <article class="box" tabindex="0" aria-labelledby="b6"><h3 id="b6">Tech Stack</h3><p>REST APIs, Webhooks, Provider SMPP/SMPP-like connectors, WhatsApp Business API, Message brokers & analytics pipelines.</p></article>
+        </div>
+
+        <!-- DEEP CONTENT (boxes) -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">How Messaging Works — Flow</h3>
+            <ol>
+              <li><strong>API Call:</strong> App calls our Message API with channel, template and recipient.</li>
+              <li><strong>Template & Opt-in:</strong> Template checks (WhatsApp) and opt-in verification for compliance.</li>
+              <li><strong>Channel Routing:</strong> Platform selects channel & provider based on rules and fallback policies.</li>
+              <li><strong>Delivery:</strong> Provider delivers message; webhook notifies delivery & failure events.</li>
+              <li><strong>Conversation:</strong> Incoming replies routed to inbox or bot for handling; agents can take over if needed.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">Integrations & Webhooks</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>API</strong><p>Simple REST endpoints for send, status and templates.</p></div>
+              <div class="mini-box"><strong>Webhooks</strong><p>Real-time callbacks for delivery, read receipts and replies.</p></div>
+              <div class="mini-box"><strong>CRM</strong><p>Push events to CRM for screen-pop and ticket updates.</p></div>
+              <div class="mini-box"><strong>Analytics</strong><p>CDR export, campaign dashboards and KPIs.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Compliance & Opt-in</h3>
+            <p>Manage opt-ins, templates for WhatsApp channels, respect opt-out requests automatically, store consent records and support carrier compliance (TRAIs, TCPA, GDPR where applicable).</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">Reliability & Fallbacks</h3>
+            <p>Multi-provider routing with priority & cost rules, SMS → WhatsApp fallbacks, resend policies on transient failures and retry/backoff logic for maximum delivery.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">FAQs</h3>
+            <div class="faq-grid">
+              <div class="faq-box">
+                <button class="faq-toggle">Do you support two-way chat?</button>
+                <div class="faq-body" hidden>Yes — two-way messaging via in-app inbox or WhatsApp replies is supported and can be routed to agents or bots.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">How fast are deliveries?</button>
+                <div class="faq-body" hidden>Transactional SMS/OTP delivery typically occurs within seconds; channel and provider affect latency — our dashboard shows real-time metrics.</div>
+              </div>
+
+              <div class="faq-box">
+                <button class="faq-toggle">Can we use templates?</button>
+                <div class="faq-body" hidden>Yes — pre-approved templates for WhatsApp and templating support for personalization across channels.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">Messaging Pricing</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Starter</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 10,000 SMS</li><li>Basic API access</li><li>Email support</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#pricing">Start</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Business</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Multi-channel support</li><li>Templates & webhooks</li><li>Priority support</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#pricing">Choose Business</a></div>
+          </div>
+
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Enterprise</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Dedicated throughput</li><li>SLA & routing rules</li><li>Account manager</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#pricing">Contact Sales</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => setOpen(!details.classList.contains('open')));
+
+      // ensure pricing boxes visible on load
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#pricing .box').forEach(b => b.classList.add('visible'));
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+
+      // FAQ toggles
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

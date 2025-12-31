@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+  <a href="{{ url_for('home') }}#home">Home</a>
+  <a href="{{ url_for('home') }}#industries">Industries</a>
+  <a href="{{ url_for('home') }}#products">Products</a>
+  <a href="{{ url_for('careers') }}">Careers</a>
+  <a href="{{ url_for('contact') }}">Contact</a>
+  <a href="{{ url_for('login') }}" class="login-btn">Login</a>
+</nav>
+  </header>
+  <title>IVR — Boxes Layout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/ivr.css') }}">
+</head>
+<body>
+  <main class="page">
+    <header class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 id="hero-title">Intelligent IVR Solutions</h1>
+          <p class="lead">Automate customer voice interactions with a smart IVR platform — fast routing, speech recognition, CRM integration and 24×7 self-service.</p>
+          <ul class="meta-list" aria-hidden="true">
+            <li>Cloud-hosted</li>
+            <li>Pay-as-you-go</li>
+          </ul>
+        </div>
+        <div class="hero-actions">
+              <button id="ReadMoreBtn" class="btn primary">Read More</button>
+              <a href="#pricing" class="btn ghost">See Pricing</a>
+          </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="device-mock" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="wave-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0047FF"/>
+                  <stop offset="1" stop-color="#6A00FF"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="108" height="108" rx="14" fill="url(#g1)" opacity="0.95"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DETAILS (collapsed by default) -->
+    <section id="details" class="details" aria-hidden="true">
+      <div class="container">
+
+        <!-- TOP SUMMARY BOXES -->
+        <div class="grid boxes-grid" id="summaryBoxes">
+          <article class="box" tabindex="0" aria-labelledby="b1"><h3 id="b1">What is IVR?</h3><p>Automated telephony system using menus, DTMF or speech recognition to serve and route callers.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b2"><h3 id="b2">Key Features</h3><p>Menus, ASR/TTS, dynamic routing, CRM integration, analytics and monitoring.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b3"><h3 id="b3">How It Helps</h3><p>Reduce agent load, cut wait times, scale without hiring and collect caller data automatically.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b4"><h3 id="b4">Who Can Use</h3><p>Banks, hospitals, e-commerce, telcos, utilities, education and service centers.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b5"><h3 id="b5">Use Cases</h3><p>Order tracking, appointment booking, balance inquiry, complaint registration, notifications.</p></article>
+          <article class="box" tabindex="0" aria-labelledby="b6"><h3 id="b6">Tech Stack</h3><p>Twilio/Exotel/Knowlarity, Google/Azure speech, REST webhooks, CRM connectors.</p></article>
+        </div>
+
+        <!-- DEEP CONTENT - all in boxes -->
+        <div class="grid deep-grid">
+          <article class="box large" tabindex="0" aria-labelledby="deep1">
+            <h3 id="deep1">How IVR Works — Step by Step</h3>
+            <ol>
+              <li><strong>Call Arrival:</strong> Incoming call hits SIP/virtual number.</li>
+              <li><strong>Initial Prompt:</strong> Greeting + main menu (DTMF or speech).</li>
+              <li><strong>User Choice:</strong> ASR converts speech or DTMF input captured.</li>
+              <li><strong>Routing Decision:</strong> Rules evaluate skills, time, VIP tags.</li>
+              <li><strong>Data Fetch:</strong> Webhook/API fetches order/balance/ticket info.</li>
+              <li><strong>Action:</strong> TTS or agent handoff with context (CRM screen-pop).</li>
+              <li><strong>Wrap-up:</strong> Log interaction, optionally send SMS/email and survey.</li>
+            </ol>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep2">
+            <h3 id="deep2">Integration & Deployment</h3>
+            <div class="inner-grid">
+              <div class="mini-box"><strong>Design</strong><p>Map flows, prompts & failovers with stakeholders.</p></div>
+              <div class="mini-box"><strong>Build</strong><p>Implement flows, webhooks, and test endpoints.</p></div>
+              <div class="mini-box"><strong>Test</strong><p>Run DTMF + ASR tests for every branch.</p></div>
+              <div class="mini-box"><strong>Deploy</strong><p>Switch number to prod, enable monitoring.</p></div>
+              <div class="mini-box"><strong>Optimize</strong><p>Use analytics to shorten flows and add shortcuts.</p></div>
+            </div>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep3">
+            <h3 id="deep3">Security & Compliance</h3>
+            <p>TLS for signaling, SRTP for media, encryption-at-rest for PII, role-based access, audit logs and PCI-friendly tokenized payment flows. IP allowlists and SOC/ISO readiness support available for enterprise customers.</p>
+          </article>
+
+          <article class="box large" tabindex="0" aria-labelledby="deep4">
+            <h3 id="deep4">SLA & Support</h3>
+            <p>Standard SLA: 99.9% uptime. Basic: business-hours support. Standard/Enterprise: 24×7 priority support and onboarding sessions with test plans.</p>
+          </article>
+
+          <!-- FAQs as boxes -->
+          <article class="box large" tabindex="0" aria-labelledby="faqTitle">
+            <h3 id="faqTitle">FAQs</h3>
+            <div class="faq-grid">
+              <div class="faq-box" data-open="false">
+                <button class="faq-toggle">Can IVR do voice authentication?</button>
+                <div class="faq-body" hidden>Yes — voice biometrics can be integrated subject to compliance; OTP over voice/SMS also supported.</div>
+              </div>
+
+              <div class="faq-box" data-open="false">
+                <button class="faq-toggle">How long to deploy?</button>
+                <div class="faq-body" hidden>Typical basic IVR: 2–7 business days. Complex NLU and integrations take longer.</div>
+              </div>
+
+              <div class="faq-box" data-open="false">
+                <button class="faq-toggle">Multiple languages?</button>
+                <div class="faq-body" hidden>Yes — supports major languages via cloud speech engines (English, Hindi, Spanish, and others).</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING (boxes) -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title" class="section-title">Pricing Plans</h2>
+
+        <div class="grid pricing-grid">
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Basic</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 1,000 calls / month</li><li>Basic IVR flow</li><li>Email support</li></ul>
+            <div class="price-cta"><a class="btn secondary" href="#pricing">Start Basic</a></div>
+          </div>
+
+          <div class="box price-box recommended">
+            <div class="price-head"><span class="price-badge">Standard</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Up to 10,000 calls / month</li><li>Speech recognition & CRM</li><li>Priority support</li></ul>
+            <div class="price-cta"><a class="btn primary" href="#pricing">Choose Standard</a></div>
+          </div>
+
+          <div class="box price-box">
+            <div class="price-head"><span class="price-badge">Enterprise</span><div class="price-val">Custom</div></div>
+            <ul class="price-features"><li>Unlimited calls</li><li>Custom SLA</li><li>Dedicated account manager</li></ul>
+            <div class="price-cta"><a class="btn ghost" href="#pricing">Contact Sales</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="footer">
+      <div class="container">© <span id= 2025 ></span>Antravox Solutions | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('ReadMoreBtn');
+      const details = document.getElementById('details');
+
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        details.setAttribute('aria-hidden', String(!open));
+        if (open) {
+          details.classList.add('open');
+          // animate boxes
+          Array.from(details.querySelectorAll('.box')).forEach((b, i) => {
+            b.style.transitionDelay = (i * 60) + 'ms';
+            b.classList.add('visible');
+          });
+          details.scrollIntoView({behavior:'smooth', block:'start'});
+        } else {
+          Array.from(details.querySelectorAll('.box')).forEach(b => {
+            b.style.transitionDelay = '';
+            b.classList.remove('visible');
+          });
+          details.classList.remove('open');
+        }
+      }
+
+      btn.addEventListener('click', () => {
+        setOpen(!details.classList.contains('open'));
+      });
+
+      // FAQs toggle
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const body = button.nextElementSibling;
+          const open = body.hidden === false;
+          body.hidden = open;
+          button.setAttribute('aria-expanded', String(!open));
+        });
+      });
+
+      // set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

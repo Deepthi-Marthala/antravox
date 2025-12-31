@@ -1,0 +1,83 @@
+/* ================= LOGIN PAGE ================= */
+
+/* Page container spacing (below fixed navbar) */
+.container {
+  max-width: 420px;
+  margin: 140px auto 60px;   /* top space for fixed navbar */
+  padding: 40px 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Login title */
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #003d6b;
+  margin-bottom: 30px;
+}
+
+/* Form layout */
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Input focus */
+.input-field:focus {
+  border-color: #003d6b;
+  box-shadow: 0 0 0 3px rgba(0, 61, 107, 0.15);
+}
+
+/* Submit button (uses your global .primary-btn style) */
+.primary-btn {
+  margin-top: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Optional helper links (forgot password, signup) */
+.login-links {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.login-links a {
+  color: #005c99;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .container {
+    margin: 120px 20px 40px;
+    padding: 30px 22px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}

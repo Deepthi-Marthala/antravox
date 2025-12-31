@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <header class="navbar"></header>
+  <title>Antravox — IVR & VoIP</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='CSS/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/products/products.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+   <div class="logo">
+   <!--<div class="logo-icon">ASPL</div>-->
+   <div class="logo-icon"> <img src="{{ url_for('static', filename='IMAGES/Antravox1.jpg') }}" alt="Company Logo" class="logo-img"> </div> 
+
+    <div class="logo-text">
+        <h1>Antravox Solutions Private Limited</h1>
+        <p>IVR · SIP · VOIP · MESSAGING</p>
+      </div>
+    </div>
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}#home" class="nav-item">Home</a>
+    <a href="{{ url_for('home') }}#industries" class="nav-item">Industries</a>
+    <a href="{{ url_for('home') }}#products" class="nav-item">Products</a>
+    <a href="{{ url_for('careers') }}" class="nav-item">Careers</a>
+    <a href="{{ url_for('contact') }}" class="nav-item">Contact</a>
+    <a href="{{ url_for('login') }}" class="login-btn nav-item">Login</a>
+  </nav>
+  </header>
+ <!-- HERO / INTRO SECTION -->
+<section class="section-intro" id="home">
+  <div class="intro-wrapper">
+ <div class="intro-left">
+    <h2 class="antravox-title">Antravox Solutions</h2>
+    <h2  class="intro-text">
+        Empowering Industries with Smart IVR & Communication Technology for 
+        Next-Generation Business Connectivity, AI-Driven Voice Solutions, and 
+        Smarter Digital Communication Ecosystems.
+    </h2>
+    </div> 
+
+    <div class="intro-right">
+      <img src="{{ url_for('static', filename='IMAGES/Antravox.jpg') }}" class="intro-logo">
+    </div>
+
+  </div>
+</section>
+
+   <!-- ======================================
+     INDUSTRIES SECTION (CLEAN, NO GAPS)
+====================================== -->
+<section id="industries" class="industries-section">
+      <h2 class="industries-title">Sectors We Empower for a Smarter Connected Future</h2>
+
+  <!-- Education -->
+  <div class="container industry-bg-1">
+    <div class="industry-wrapper">
+      <div class="industry-left education-left">
+        <img src="https://img.icons8.com/color/64/000000/graduation-cap.png" alt="Education Icon">
+        <h2>Education</h2>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Customized call flows to guide students to the correct faculty member.</li>
+          <li>Skill-based routing ensures questions reach subject matter experts.</li>
+          <li>Conversational recording and real-time monitoring.</li>
+          <li>Lead management integration via API Dial Plan.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Healthcare -->
+  <div class="container industry-bg-2">
+    <div class="industry-wrapper">
+      <div class="industry-left healthcare-left">
+        <img src="https://img.icons8.com/color/64/000000/hospital-room.png" alt="Health Care">
+        <h3>Health Care</h3>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Automated appointment reminders via IVR or SMS.</li>
+          <li>Patient callback and prescription renewal flows.</li>
+          <li>Emergency hotline and virtual queue management.</li>
+          <li>Secure OTP-based patient verification for appointments and reports.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- E-Commerce -->
+  <div class="container industry-bg-1">
+    <div class="industry-wrapper">
+      <div class="industry-left e-Commerce-left">
+        <img src="https://img.icons8.com/color/64/000000/shopping-cart.png" alt="E-Commerce">
+        <h4>E-Commerce</h4>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Order confirmations through IVR or voice calls.</li>
+          <li>Real-time delivery updates and return tracking.</li>
+          <li>Feedback collection after purchase.</li>
+          <li>Secure OTP-based patient verification for appointments and reports.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Manufacturing -->
+  <div class="container industry-bg-2">
+    <div class="industry-wrapper">
+      <div class="industry-left manufacturing-left">
+        <img src="https://img.icons8.com/color/64/000000/factory.png" alt="Manufacturing">
+        <h5>Manufacturing</h5>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Production alerts and real-time shift notifications.</li>
+          <li>Automated maintenance and downtime reminders.</li>
+          <li>Inventory and supply chain status updates.</li>
+          <li>Worker safety alerts and compliance announcements.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- IT / ITES -->
+  <div class="container industry-bg-1">
+    <div class="industry-wrapper">
+      <div class="industry-left it-left">
+        <img src="https://img.icons8.com/color/64/000000/computer.png" alt="IT & ITES">
+        <h5>IT / ITES</h5>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Automated client support through intelligent IVR systems.</li>
+          <li>Call analytics and tracking for performance insights.</li>
+          <li>API-based integration with CRM and helpdesk systems.</li>
+          <li>Virtual assistance and AI-driven routing for customer calls.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banking & Finance -->
+  <div class="container industry-bg-2">
+    <div class="industry-wrapper">
+      <div class="industry-left banking-left">
+        <img src="https://img.icons8.com/color/64/000000/bank-building.png" alt="Banking & Finance">
+        <h5>Banking & Finance</h5>
+      </div>
+      <div class="industry-right">
+        <ul>
+          <li>Secure voice verification for account inquiries.</li>
+          <li>Automated balance checks, mini statements, and payment reminders.</li>
+          <li>IVR-based loan inquiry and credit card activation systems.</li>
+          <li>Priority call routing for premium customers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==========================
+     OUR PRODUCTS SECTION
+=========================== -->
+<section class="products-section" id="products">
+  <h2 class="products-title">Our IVR Products & Communication Services</h2>
+
+  <div class="products-wrapper">
+    <button class="arrow left" id="leftArrow">&#10094;</button>
+    <div class="products-grid" id="productsGrid">
+
+      <!-- 1. IVR -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front card1">
+            <img src="{{ url_for('static', filename='IMAGES/products/ivr.jpg') }}"alt="IVR">
+            <h3>IVR</h3>
+          </div>
+          <div class="flip-card-back">
+             <p>Smart IVR that manages customer calls with automation and real-time routing.</p>
+             <a href="/ivr" class="know-more-btn">Know More</a>
+
+  </div>
+</div>
+      </div>
+
+      <!-- 2. Messaging -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front card2">
+           <img src="{{ url_for('static', filename='IMAGES/products/message.jpg') }}" alt="Messaging">
+            <h3>Messaging</h3>
+          </div>
+          <div class="flip-card-back">
+              <p>Instant SMS & WhatsApp messaging for alerts, reminders, and customer engagement.</p>
+              <a href="/messaging" class="know-more-btn">Know More</a>
+               
+      </div>
+
+
+        </div>
+      </div>
+
+      <!-- 3. SIP -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card3">
+            <img src="{{ url_for('static', filename='IMAGES/products/sip.jpg') }}" alt="SIP">
+            <h3>SIP</h3>
+          </div>
+
+          <div class="flip-card-back">
+            <p>Secure SIP integration enabling seamless voice, video, and messaging.</p>
+            <a href="/sip" class="know-more-btn">Know More</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4. VoIP -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card4">
+            <img src="{{ url_for('static', filename='IMAGES/products/voip.jpg') }}" alt="VoIP">
+            <h3>VoIP</h3>
+          </div>
+
+          <div class="flip-card-back">
+            <p>Cloud-based VoIP systems offering scalable, high-quality communication.</p>
+            <a href="/voip" class="know-more-btn">Know More</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5. AI IVR -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card5">
+            <img src="{{ url_for('static', filename='IMAGES/products/AI-ivr.jpg') }}" alt="AI IVR">
+            <h3>AI IVR</h3>
+          </div>
+
+          <div class="flip-card-back">
+            <p>AI-powered IVR that listens, understands, and responds intelligently.</p>
+              <a href="/aiivr" class="know-more-btn">Know More</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 6. AI Agent -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <div class="flip-card-front card6">
+            <img src="{{ url_for('static', filename='IMAGES/products/AI-agent.jpg') }}" alt="AI Agent">
+            <h3>AI Agent</h3>
+          </div>
+
+          <div class="flip-card-back">
+            <p>AI agents that automate conversations with natural, human-like responses.</p>
+            <a href="/aiagent" class="know-more-btn">Know More</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <button class="arrow right" id="rightArrow">&#10095;</button>
+  </div>
+</section>
+   
+  <!-- WHY ANTRAVOX SECTION -->
+  <section class="why-antravox">
+    <h2 class="why-title">Why Choose Antravox Solutions?</h2>
+    <div class="why-content">
+
+      <!-- CONTENT TOP -->
+      <div class="why-left">
+        <p>
+          At <strong>Antravox Solutions</strong> We empower businesses with intelligent IVR, SIP, and VoIP automation that enhances communication and improves 
+  customer engagement. Our systems deliver scalability, reliability, and seamless service — ensuring your 
+  business stays connected, efficient, and ahead of the competition by streamlining workflows, reducing
+   response times, and improving call management efficiency. With advanced cloud-based infrastructure, 
+   real-time analytics, and secure connectivity.</p>
+      </div>
+
+      <!-- RIGHT SIDE -->
+<div class="why-right">
+  <div class="why-row">
+
+    <div class="why-card">
+      <img src="https://img.icons8.com/color/96/technical-support.png" class="why-icon" alt="Support" />
+      <h3>24/7 Expert Support</h3>
+      <p>Our expert support team ensures uninterrupted service availability round the clock.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="https://img.icons8.com/color/96/idea.png" class="why-icon" alt="Innovation" />
+      <h3>Innovative Solutions</h3>
+      <p>We deliver next-gen IVR, VoIP, and messaging solutions built to your industry’s needs.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="https://img.icons8.com/color/96/cloud-connection.png" class="why-icon" alt="Scalability" />
+      <h3>Scalable Infrastructure</h3>
+      <p>Our cloud-powered architecture grows with your business — flexible, fast, and reliable.</p>
+    </div>
+
+    <div class="why-card">
+      <img src="https://img.icons8.com/color/96/trust.png" class="why-icon" alt="Reliability" />
+      <h3>Trusted Reliability</h3>
+      <p>Proven uptime and enterprise-grade call quality trusted by leading organizations.</p>
+    </div>
+
+  </div>
+</div>
+<!--==== Footer ====-->
+<footer class="corporate-footer">
+  <!-- ================= TOP SECTION ================= -->
+  <div class="footer-top">
+
+    <!-- COLUMN 1 : BRAND -->
+    <div class="footer-col brand">
+      <h3 class="brand-name">
+        <span>antravox</span>
+      </h3>
+
+      <p class="brand-desc">
+        Intelligent IVR, SIP, VoIP & AI-driven communication
+        solutions enabling businesses worldwide.
+      </p>
+
+      <a href="mailto:info@antravox.com" class="brand-mail">
+        info@antravox.com →
+      </a>
+    </div>
+
+    <!-- COLUMN 2 : INDUSTRIES -->
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <ul>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Healthcare</a></li>
+        <li><a href="#">E-Commerce</a></li>
+        <li><a href="#">Manufacturing</a></li>
+        <li><a href="#">IT / ITES</a></li>
+        <li><a href="#">Banking & Finance</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 : PRODUCTS -->
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">IVR</a></li>
+        <li><a href="#">Messaging</a></li>
+        <li><a href="#">SIP</a></li>
+        <li><a href="#">VoIP</a></li>
+        <li><a href="#">AI IVR</a></li>
+        <li><a href="#">AI Agent</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 : CAREERS -->
+    <div class="footer-col">
+      <h4>Careers</h4>
+      <ul>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Internships</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ================= BOTTOM SECTION ================= -->
+  <div class="footer-bottom">
+
+    <div class="footer-bottom-left">
+      © 2025 Antravox Solutions
+      <a href="#">Privacy & Legal</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="footer-bottom-right">
+      <span>Follow us</span>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("productsGrid");
+  const leftArrow = document.getElementById("leftArrow");
+  const rightArrow = document.getElementById("rightArrow");
+
+  // Calculate scroll distance based on one card width + gap
+  const firstCard = grid.querySelector(".flip-card");
+  let scrollAmount = 250; // fallback
+
+  if (firstCard) {
+    const cardWidth = firstCard.offsetWidth;
+    const style = window.getComputedStyle(grid);
+    const gap = parseInt(style.columnGap || style.gap || "20", 10);
+    scrollAmount = cardWidth + gap;
+  }
+
+  function slide(direction) {
+    grid.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
+  leftArrow.addEventListener("click", () => slide(-1));
+  rightArrow.addEventListener("click", () => slide(1));
+});
+</script>
+
+<!-- =======================
+     JAVASCRIPT
+======================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const sections = document.querySelectorAll("section, main");
+
+  /* =========================
+     CLICK → ACTIVE BUTTON
+  ========================= */
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
+   /* =========================
+      SCROLL → ACTIVE BUTTON
+   =========================*/
+   window.addEventListener("scroll", () => {
+    let current = "";
+
+     sections.forEach(section => {
+       const sectionTop = section.offsetTop - 120;
+       if (window.scrollY >= sectionTop) {
+         current = section.getAttribute("id");
+       }
+     });
+
+     navLinks.forEach(link => {
+       link.classList.remove("active");
+      if (link.getAttribute("href")?.includes(`#${current}`)) {
+        link.classList.add("active");
+       }
+    });
+  });
+
+ });
+</script>

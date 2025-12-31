@@ -1,0 +1,727 @@
+/* ======================================
+   GENERAL RESET
+====================================== */
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ======================================
+   FIXED NAVBAR (STICKY MENU BAR)
+====================================== */
+.navbar {
+  position: fixed;             /* Keeps navbar always on top */
+  top: 0;                      /* Sticks to the very top */
+  left: 0;
+  width: 100%;                 /* Full width */
+  z-index: 1000;               /* Keeps it above all other sections */
+  /*background: linear-gradient(90deg, #003d6b, #025e94);*/
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background:#003d6b;
+}
+/* nav logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text h1 {
+  font-size:20px;
+}
+
+.logo-text p {
+  font-size: 12px;
+  color: #d8e8f5;
+}
+/* PERFECT ROUND LOGO */
+.logo-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;        /* makes it fully round */
+    
+}
+
+/* BUTTONS */
+.intro-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+.intro-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #003d6b;
+  color: white;
+}
+.primary-btn:hover {
+  background: #025e94;
+}
+.secondary-btn {
+  border: 2px solid #003d6b;
+  color: #003d6b;
+  background: white;
+}
+.secondary-btn:hover {
+  background: #e6f0fa;
+}
+/* Navbar links */
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 6px;
+  position: relative;
+  text-decoration: none; 
+  margin-left: 24px;
+   font-weight: 500; 
+   transition: 0.3s; 
+}
+
+/* Underline (hidden by default) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+/* Hover underline */
+.nav-links a:hover::after {
+  width: 100%;
+}
+/* ACTIVE underline */
+/* .nav-links a.active::after {
+  width: 100%;
+} */
+
+
+/* MAIN HERO SECTION (FINAL WORKING VERSION) */
+ .section-intro { 
+   /* smaller top padding */
+   display: flex;
+    justify-content: center;
+     align-items: center;
+      position: relative; 
+      padding-top: 0px !important; /* Reduce from 60px or 80px → smaller */ 
+      padding-bottom: 0px !important; /* Reduce the bottom gap */ 
+      height: auto !important; 
+      background-size: cover;
+       /* Background Image (no double logo) */ 
+      background: url("../IMAGES/main-bg.jpg") no-repeat center center; 
+      background-size: cover;
+       min-height: 40px;
+       height: auto;
+}
+.intro-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+/* RIGHT LOGO */
+.intro-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.intro-logo {
+  width: 420px;
+  height: auto;
+}
+/* Highlighted tag text */
+.antravox-title {
+  font-size: 48px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+  text-align: left;    /* Important */
+  font-style: italic;
+}
+
+.intro-text {
+  font-size: 22px;
+  line-height: 1.6;
+  color: white;
+  font-style: italic;
+  font-weight: 400;
+  max-width: 850px;
+  text-align: left;
+    margin-left: 0;       /* Change to right if needed */
+}
+.intro-left {
+  display: flex;
+  flex-direction: column;   /* STACK title + paragraph */
+  align-items: flex-start;   /* Align everything to LEFT */
+  max-width: 600px;
+  text-align: left;
+}
+
+
+
+/* -----------------------------------------
+   MOBILE RESPONSIVE (TABLET & PHONE)
+------------------------------------------*/
+@media (max-width: 1024px) {
+  .intro-left h2 {
+    font-size: 32px;
+    max-width: 700px;
+  }
+
+  .intro-logo {
+    width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  /* STACK TEXT + LOGO VERTICALLY */
+  .intro-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-left h2 {
+    text-align: center;
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .intro-right {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .intro-logo {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-left h2 {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+
+  .intro-logo {
+    width: 250px;
+  }
+}
+
+
+/* ======================================
+   INDUSTRIES SECTION – FINAL CLEAN CODE
+====================================== */
+
+/* Remove extra space from the industries section top */
+#industries { 
+  margin-top: 30px;
+  scroll-margin-top: 60px;
+
+ }
+/* Container Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    padding:25px,20px;
+}
+
+/* Title */
+.industries-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #002f50;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* Subtitle / Lead text */
+.industry-lead {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #000;
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* Grid Wrapper */
+.industry-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each Industry Box */
+.industry-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* LEFT BOX (Icon Background Block) */
+.industry-left {
+    width: 240px;
+    height: 200px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.industry-left img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+/* RIGHT BOX (Description Block) */
+.industry-right {
+    flex: 1;
+    background: #f3f4f6;
+    padding: 40px;
+    border-radius: 25px;
+}
+.industry-right ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+/* Color Themes for Each Industry */
+.education-left {
+    background: #FFE9B5;
+}
+.healthcare-left {
+    background: #D6F0FF;
+}
+
+.e-Commerce-left {
+    background: #e8f5e9;
+}
+
+.manufacturing-left {
+    background: #FCD4DD;
+}
+/* IT / ITES Pastel Blue */
+.it-left {
+  background: #D7E9FF;          /* pastel blue */
+}
+
+/* Banking & Finance Pastel Green */
+.banking-left {
+  background: #E5F7E5;          /* pastel green */
+ 
+}
+ 
+/* WHY ANTRAVOX SECTION */
+.why-antravox {
+  background: linear-gradient(180eg, #f5f9fc 0%, #ffffff 100%);
+  padding: 100px 60px 40px;  /* reduced top padding */
+  text-align: center;
+  color: #003d6b;
+}
+
+.why-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  color: #002f50;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.why-title::after {
+  content: "";
+  display: none;
+  width: 80px;
+  height: 4px;
+  background: #0078d7;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* FLEX ROW FOR CARDS */
+.why-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 25px;
+  
+}
+
+/* CARD */
+.why-card {
+   background-color: #B4F8C8;
+  width: 25%;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+
+/* ICON */
+.why-icon {
+  width: 60px;     /* smaller icon */
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.why-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #003d6b;
+}
+
+/* DESCRIPTION */
+.why-card p {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #5b6e7f;
+  line-height: 1.45;
+}
+
+.why-left {
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  text-align: justify;              /* PERFECT alignment */
+  text-justify: inter-word;         /* smooth spacing */
+  font-size: 18px;
+  line-height: 32px;
+  padding: 10px 15px;
+}
+
+.why-right{
+  padding-bottom: 50px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+  .why-row {
+    flex-wrap: wrap;
+  }
+  .why-card {
+    width: 48%;
+  }
+}
+
+@media(max-width: 600px) {
+  .why-card {
+    width: 100%;
+  }
+}
+/* ================= GLOBAL RESET (IMPORTANT) ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ================= GLOBAL FIX ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* ================= FOOTER ================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.corporate-footer {
+  width: 100%;
+  min-height: 100vh;          /* FULL SCREEN HEIGHT */
+  background: #003d6b;        /* Your background color */
+
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 80px 120px 40px;   /* top | sides | bottom */
+  box-sizing: border-box;
+
+  position: relative;
+}
+
+
+/* ================= TOP GRID ================= */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* ================= BRAND COLUMN ================= */
+.brand-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.brand-name span {
+  color: #ff7a18;
+}
+
+.brand-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e6e6e6;
+  margin-bottom: 30px;
+  max-width: 360px;
+}
+
+.brand-mail {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand-mail:hover {
+  color: #ff7a18;
+}
+
+/* ================= LINK COLUMNS ================= */
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.footer-col a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-col a:hover {
+  color: #ff7a18;
+}
+
+/* ================= BOTTOM BAR ================= */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 25px;
+  font-size: 14px;
+}
+
+.footer-bottom-left a {
+  margin-left: 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom-left a:hover {
+  text-decoration: underline;
+}
+.footer-top {
+  display: flex;
+  gap: 120px;   /* 👈 THIS creates space between columns */
+}
+
+/* ================= SOCIALS ================= */
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-bottom-right span {
+  margin-right: 10px;
+}
+
+.footer-bottom-right a {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.footer-bottom-right a:hover {
+  color: #ff7a18;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .corporate-footer {
+    padding: 60px 30px 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .footer-bottom-left a {
+    margin-left: 12px;
+  }
+}
+
+
+/* GO TO HOME */
+.back-btn {
+    position: fixed;
+    bottom: 20px;     /* distance from bottom */
+    left: 20px;       /* distance from left edge */
+    text-decoration: none;
+    font-size: 18px;
+    color: #2874f0;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+
+.products-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 10px 40px; 
+}
+
+.products-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* no scrollbar */
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+
+/* SLIDER WRAPPER */
+.products-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    white-space: nowrap;
+}
+
+/* Hide scrollbar */
+.products-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* ARROW BUTTONS */
+.product-slider-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+    top: 10px;
+}
+
+.arrow-btn {
+    background: #003d6b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background: #005a8f;
+}
+
+.know-more-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #00345B;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.more-info {
+  display: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #00345B;
+}
+
+/* know more */
+
+.know-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #00345B;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.know-more-btn:hover {
+  background-color: #005b8f;
+}
