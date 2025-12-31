@@ -1,6 +1,6 @@
 import os
 from flask import Flask, request, render_template, redirect, url_for
-import psycopg2
+import psycopg
 
 # ================= APP CONFIG =================
 
@@ -102,7 +102,7 @@ def internship():
 # ================= DATABASE CONNECTION =================
 
 try:
-    conn = psycopg2.connect(
+    conn = psycopg.connect(
         host="localhost",
         database="login access",
         user="postgres",
