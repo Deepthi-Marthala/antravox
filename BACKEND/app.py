@@ -7,6 +7,9 @@ import psycopg2
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FRONTEND_DIR = os.path.join(BASE_DIR, "FRONTEND")
 
+
+
+
 app = Flask(
     __name__,
     template_folder=os.path.join(FRONTEND_DIR, "TEMPLATES"),
